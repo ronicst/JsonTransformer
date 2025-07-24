@@ -1,0 +1,54 @@
+{
+  "outputFields": {
+    "responseCode": {"source": "message.responseHeader.responseCode", "required": true},
+    "responseType": {"source": "message.responseHeader.responseType", "required": true},
+    "responseMessage": {"source": "message.responseHeader.responseMessage", "required": false},
+    "tenantID": {"source": "message.responseHeader.tenantID", "required": true},
+    "expRequestId": {"source": "message.responseHeader.expRequestId", "required": true},
+    "overallResponse.decision": {"source": "message.responseHeader.overallResponse.decision", "required": true},
+    "newDecision": {
+      "operation": "conditional_decision",
+      "sources": [
+        "message.responseHeader.overallResponse.decision",
+        "message.clientResponsePayload.orchestrationDecisions[0].decision"
+      ],
+      "requiredSources": [true, true],
+      "scores": [
+        "message.responseHeader.overallResponse.score",
+        "message.clientResponsePayload.orchestrationDecisions[0].score"
+      ],
+      "requiredScores": [true, true],
+      "required": true
+    },
+    "newDecisionReasons": {
+      "operation": "fallback",
+      "sources": [
+        "message.responseHeader.overallResponse.decisionReasons",
+        "message.clientResponsePayload.orchestrationDecisions[0].decisionReasons"
+      ],
+      "requiredSources": [false, false],
+      "required": false
+    },
+    "address": {
+      "operation": "concatenate",
+      "sources": [
+        "message.originalRequestData.contacts[0].addresses[0].street",
+        "message.originalRequestData.contacts[0].addresses[0].street2",
+        "message.originalRequestData.contacts[0].addresses[0].postTown",
+        "message.originalRequestData.contacts[0].addresses[0].postal",
+        "message.originalRequestData.contacts[0].addresses[0].countryCode"
+      ],
+      "requiredSources": [true, false, false, false, true],
+      "separator": ", "
+    },
+    "concatenateExample": {
+      "operation": "concatenate",
+      "sources": [
+        "message.originalRequestData.control[0].option1",
+        "message.originalRequestData.control[0].value"
+      ],
+      "separator": " : ",
+      "requiredSources": [true, false]
+    }
+  }
+} 

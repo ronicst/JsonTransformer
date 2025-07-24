@@ -1,0 +1,250 @@
+{
+  "message": {
+    "responseHeader": {
+      "requestType": "attributes",
+      "clientReferenceId": "123456",
+      "messageTime": "2022-07-29T14:55:32Z",
+      "overallResponse": {
+        "decision": "ACCEPT01",
+        "score": 50,
+        "decisionText": "Default decision",
+        "decisionReasons": [
+          "No Fraud Detected",
+          "Fraud Dection Missing"
+        ],
+        "recommendedNextActions": [],
+        "spareObjects": []
+      },
+      "responseCode": "R0201",
+      "responseType": "INFO",
+      "responseMessage": "Workflow Complete.",
+      "tenantID": "z8vkw3rj1m2xq7pd5anlt9cgf0e4hb",
+      "expRequestId": "RB000000001"
+    },
+    "clientResponsePayload": {
+      "orchestrationDecisions": [
+        {
+          "sequenceId": "1",
+          "decisionSource": "IDX",
+          "decision": "ACCEPT02",
+          "decisionReasons": [],
+          "score": 30,
+          "decisionText": "Default decision",
+          "nextAction": "Continue",
+          "appReference": "P00XDR123445"
+        }
+      ],
+      "decisionElements": [
+        {
+          "serviceName": "IDX",
+          "warningsErrors": [
+            {}
+          ],
+          "fraudAttributes": [
+            {
+              "contactId": "MAINCONTACT_1",
+              "attributes": {
+                "addr_validity": "false",
+                "num_sources_current_emails": "1",
+                "addr_frequency": "0",
+                "ssn_ed_distance": "5",
+                "num_cohabitant": "",
+                "cluster_type": "1",
+                "name_cnt": "6",
+                "is_phone_random_number": "false",
+                "phone_to_name": "4.Missing",
+                "ssn": "6",
+                "cluster_score": "0.001874190281766869",
+                "state": "9999",
+                "second_last_name": "9999",
+                "errorCode_qas": "-2",
+                "zip": "4",
+                "to_db_age_percentile": "0.811327835964036",
+                "email_cnt": "6",
+                "num_phones_1year": "0",
+                "device_id": "16",
+                "num_emails_5year": "6",
+                "ssn_state_consistent": "0",
+                "num_sources_current_phones": "0",
+                "rb": "0",
+                "re": "2",
+                "num_phones_10year": "0",
+                "phone": "1",
+                "num_sources_current_addresses": "4",
+                "dob": "17",
+                "curr_addr_age": "1360",
+                "str_id": "7",
+                "calibrated_bad_rate": "0.017857142857142856",
+                "num_source": "4",
+                "city": "9999",
+                "address_to_name": "4.Missing",
+                "issued_ssn_year_valid": "2",
+                "num_phones_3year": "0",
+                "phone_frequency": "0",
+                "bi": "0",
+                "address_match": "0",
+                "email_error_code": "0",
+                "accuracy_radius": "-2",
+                "best_score_with_the_same_zip": "-2",
+                "name_frequency": "5466;0;465",
+                "with_high_freq_ssn": "0",
+                "num_phones_6mons": "0",
+                "to_db_age_outlier_10_90": "1",
+                "ssn_cnt": "1",
+                "num_emails_6mons": "1",
+                "email": "2",
+                "email_validity": "true",
+                "num_same_phone": "",
+                "last_name": "10",
+                "cl": "0",
+                "best_ip_luid_score": "-2",
+                "zip5_match_on_the_best_luid": "-2",
+                "ssn_group_in_issued_flag": "0",
+                "cp": "0",
+                "highest_freq_2nd": "-1",
+                "num_addresses_6mons": "0",
+                "issued_ssn_dob_valid": "2",
+                "num_cluster_per_ssn": "1",
+                "address_cnt": "7",
+                "num_phones_5year": "0",
+                "unitid": "6",
+                "connect_type": "CORPORATE",
+                "distance_IP": "-2",
+                "lk": "2",
+                "tv": "2",
+                "flip_flop": "9",
+                "dob_cnt": "1",
+                "is_simple_combination": "0",
+                "ssn_group_consistent": "2",
+                "email_to_name": "4.Missing",
+                "num_addresses_3year": "0",
+                "group": "25",
+                "num_emails_10year": "6",
+                "email_freq": "0",
+                "str_name": "4",
+                "issued_ssn_to_db_valid": "2",
+                "ssn_group_valid": "2",
+                "phone_cnt": "-1",
+                "fa": "0",
+                "num_addresses_5year": "3",
+                "fc": "0",
+                "fe": "0",
+                "time_overlap": "5",
+                "highest_freq": "-1",
+                "first_name_in_email": "0",
+                "issued_ssn_year_consistent": "2",
+                "fr": "0",
+                "num_states_5_year": "2",
+                "num_emails_1year": "1",
+                "num_emails_3year": "6",
+                "ip_cnt": "-1",
+                "non_confusion_score": "-1",
+                "phone_validity": "false",
+                "num_addresses_10year": "6",
+                "returnCode_qas": "-2",
+                "phone_pm": "9999",
+                "first_name": "4",
+                "last_name_in_email": "0",
+                "gp": "1",
+                "phone_error_code": "1",
+                "middle_name": "2",
+                "num_same_email": "5",
+                "gen_code": "5",
+                "age_diff_in_household": "-1",
+                "num_addresses_1year": "0",
+                "num_cohabitant_same_lastname": "",
+                "super_address_ind": "-1",
+                "dwelling_type": "",
+                "ip_to_email": "-2"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "originalRequestData": {
+      "control": [
+        {
+          "option": "REQUEST_TYPE",
+          "value": "Simulator"
+        }
+      ],
+      "contacts": [
+        {
+          "id": "MAINCONTACT_1",
+          "person": {
+            "typeOfPerson": "APPLICANT",
+            "names": [
+              {
+                "id": "MAINPERSONNAME_1",
+                "type": "false",
+                "firstName": "Kumar",
+                "middleNames": "",
+                "surName": "Koya",
+                "nameSuffix": ""
+              }
+            ]
+          },
+          "addresses": [
+            {
+              "id": "MAINAPPADDRESS_1",
+              "addressType": "CURRENT",
+              "street": "10895 Scripps",
+              "street2": "",
+              "postTown": "Poway",
+              "postal": "92064",
+              "county": "CA",
+              "stateProvinceCode": "CA",
+              "countryCode": "USA"
+            }
+          ],
+          "telephones": [
+            {
+              "id": "M",
+              "number": "8581239780",
+              "internationalCode": "1",
+              "phoneIdentifier": "HOME"
+            }
+          ],
+          "emails": [
+            {
+              "id": "MAINAPPLICANTEMAIL_1",
+              "type": "HOME",
+              "email": "viaari@gmail.com"
+            }
+          ],
+          "salary": {
+            "annual": 1,
+            "currencyType": "USD"
+          }
+        }
+      ],
+      "application": {
+        "applicants": [
+          {
+            "id": "APPLICANT_1",
+            "contactId": "MAINCONTACT_1",
+            "type": "INDIVIDUAL",
+            "applicantType": "APPLICANT"
+          },
+          {
+            "id": "APPLICANT_2",
+            "contactId": "MAINCONTACT_2",
+            "type": "INDIVIDUAL",
+            "applicantType": "APPLICANT"
+          },
+          {
+            "id": "APPLICANT_3",
+            "contactId": "MAINCONTACT_3",
+            "type": "INDIVIDUAL",
+            "applicantType": "APPLICANT"
+          }
+        ]
+      },
+      "device": {
+        "id": "DEVICEID_1",
+        "ipAddress": "35.195.108.181"
+      }
+    }
+  }
+}
